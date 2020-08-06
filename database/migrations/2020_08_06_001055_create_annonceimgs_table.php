@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class CreateVersionimgsTable extends Migration
+class CreateAnnonceimgsTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,13 +13,13 @@ class CreateVersionimgsTable extends Migration
      */
     public function up()
     {
-        Schema::create('versionimgs', function (Blueprint $table) {
+        Schema::create('annonceimgs', function (Blueprint $table) {
             $table->bigIncrements('id');
-            $table->unsignedBigInteger('Idversion');
-            $table->foreign('Idversion')->references('id')->on('versions');
+            $table->unsignedBigInteger('Idannoce');
+            $table->foreign('Idannoce')->references('id')->on('annoces');
 
             $table->unsignedBigInteger('Idimg');
-            $table->foreign('Idimg')->references('id')->on('imgvs');
+            $table->foreign('Idimg')->references('id')->on('imgas');
             $table->timestamps();
         });
     }
@@ -31,6 +31,6 @@ class CreateVersionimgsTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('versionimgs');
+        Schema::dropIfExists('annonceimgs');
     }
 }

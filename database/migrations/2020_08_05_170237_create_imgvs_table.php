@@ -14,7 +14,8 @@ class CreateImgvsTable extends Migration
     public function up()
     {
         Schema::create('imgvs', function (Blueprint $table) {
-            $table->id();
+            $table->bigIncrements('id');
+            $table->string('lien');
             $table->timestamps();
         });
     }
