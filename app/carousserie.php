@@ -6,5 +6,5 @@ use Illuminate\Database\Eloquent\Model;
 
 class carousserie extends Model
 {
-    //
+    protected $guarded = [];
 }
