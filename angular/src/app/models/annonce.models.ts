@@ -1,8 +1,19 @@
+import { Compte } from './Compte.models';
+
 export class Annonce {
 
+
+
     id: number;
-    ref: string;
-    libelle: string;
-    idemploye: number;
+    Marque: string;
+    Model: string;
+    Prix: number;
+    Km: number;
+    Description: string;
+    anneeModel: number;
+    carburant: string;
+    idUser: number;
+    compte: Compte;
+
 
 }
